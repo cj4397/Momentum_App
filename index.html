@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Momentum-App</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <script src="https://kit.fontawesome.com/2cea6ac537.js" crossorigin="anonymous"></script>
+
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <img id="background" src="" alt="background" />
+
+  <button onclick="onLogoutSubmit()" id="name_btn" class="">
+    Logout
+  </button>
+
+  <div id="name_input" class="modal_name">
+    <div>
+      <img id="name_bg" src="assets/welcome.jpg" alt="">
+    </div>
+    <div id="m_container">
+      <div class="modal_content">
+
+        <h1>Hello, what's your name?</h1>
+        <form id="login-form" class="hidden">
+          <input id="login_form_input" class="login" type="text" placeholder="Name/Nickname" required />
+          <button type="submit" class="loginBtn">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="welcome">
+    <div id="time_container">
+      <time class="mx-auto" id="time"></time>
+    </div>
+    <div id="greeting_container">
+      <h1 id="greeting"></h1>
+
+    </div>
+    <div>
+      <h1>What is our plan for today?</h1>
+
+      <input type="text" id="todo_input2" placeholder="Focus" />
+
+
+    </div>
+
+  </div>
+
+
+  <div id="quote" class="columns is-flex  has-text-centered">
+    <div class="ml-auto quote_pic  is-flex is-flex-direction-column">
+      <img class="mx-auto" id="quote_pic" src="" alt="" />
+      <p class="is-bold has-text-weight-bold is-italic is-size-8" id="quote_author"></p>
+    </div>
+    <div class=" is-flex column is-four-fifths is-flex-direction-column p-0 mr-auto my-auto">
+      <span id="quote_quote"></span>
+      <button id="quote_next" onclick="next()">Next Quote</button>
+    </div>
+  </div>
+
+
+
+  <div id="weather_container" class="dropdown is-right is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button weather_btn" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <div id="weather" class="is-flex is-flex-direction-column">
+          <div class="is-flex mx-auto">
+            <img id="wicon" src="" alt="Weather icon" />
+            <p class="my-auto has-text-weight-semibold" id="temp"></p>
+          </div>
+          <p class="has-text-weight-semibold mx-auto" id="city"></p>
+        </div>
+      </button>
+    </div>
+    <div class="dropdown-menu " id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <p id="weather_description"></p>
+
+          <hr class="dropdown-divider">
+
+          <p id="humidity"></p>
+
+          <p id="sea_level"></p>
+          <p id="ground_level"></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div id="todo" onclick="openNav()" class="header">
+    <h2>To Do List</h2>
+  </div>
+
+  <div class="todo_container">
+    <button id="closebtn" type="button" class="border btn px-3" onclick="closeNav()">
+      X
+    </button>
+    <div id="todo_add">
+      <input type="text" id="todo_input" placeholder="Todo" />
+      <span onclick="option()" class="addTask">Add</span>
+    </div>
+    <ul id="todo_list"></ul>
+
+
+    </ul>
+  </div>
+
+
+
+  <script src="js/backgound.js"></script>
+
+  <script src="js/weather.js"></script>
+
+  <script src="js/quotes.js"></script>
+  <script src="js/todo.js"></script>
+
+
+  
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+</body>
+
+</html>
